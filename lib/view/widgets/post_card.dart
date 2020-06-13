@@ -46,8 +46,8 @@ class _PostTitleAndSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle titleTheme = Theme.of(context).textTheme.title;
-    final TextStyle summaryTheme = Theme.of(context).textTheme.body1;
+    final TextStyle titleTheme = Theme.of(context).textTheme.headline6;
+    final TextStyle summaryTheme = Theme.of(context).textTheme.bodyText1;
     final String title = DemoValues.postTitle;
     final String summary = DemoValues.postSummary;
 
