@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:leaf/view/pages/home_page.dart';
 
 void main() => runApp(Leaf());
@@ -8,6 +9,10 @@ class Leaf extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Colors.green,
