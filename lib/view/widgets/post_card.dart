@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:leaf/helper/demo_values.dart';
+import 'package:leaf/view/pages/post_page.dart';
 import 'package:leaf/view/presentation/themes.dart';
 
 class PostCard extends StatelessWidget {
@@ -7,21 +8,30 @@ class PostCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 6 / 3,
-      child: Card(
-        //this is the feed card
-        elevation: 10,
-        child: Container(
-          margin: const EdgeInsets.all(4.0),
-          padding: const EdgeInsets.all(4.0),
-          child: Column(
-            children: <Widget>[
-              //order of the children matters
-              _PostDetails(),
-              Divider(color: Colors.grey),
-              _Post(),
-            ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (BuildContext context) {
+          //screens and pages are called routes
+          return PostPage();
+        }));
+      },
+      child: AspectRatio(
+        aspectRatio: 6 / 3,
+        child: Card(
+          //this is the feed card
+          elevation: 10,
+          child: Container(
+            margin: const EdgeInsets.all(4.0),
+            padding: const EdgeInsets.all(4.0),
+            child: Column(
+              children: <Widget>[
+                //order of the children matters
+                _PostDetails(),
+                Divider(color: Colors.grey),
+                _Post(),
+              ],
+            ),
           ),
         ),
       ),
