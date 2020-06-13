@@ -9,9 +9,12 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Leaf"),
       ),
-      body: Center(
-        child: Text("Hello world!"),
-      ),
+      body: ListView.builder(
+          itemCount: 5, //# of widges to built
+          itemBuilder: (BuildContext context, int index) {
+            //function to build that type of widget
+            return PostCard();
+          }),
     );
   }
 }
