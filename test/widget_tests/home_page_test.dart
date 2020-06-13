@@ -18,9 +18,6 @@ void main() {
     expect(find.byType(Text), findsNWidgets(2));
 
     // Test: "Leaf" text
-    expect(find.text("Leaf"), findsOneWidget);
-
-    // Test: "Hello world!" text
-    expect(find.text("Hello world!"), findsOneWidget);
+    expect(find.text("Leaf"), findsWidgets);
   });
 }
