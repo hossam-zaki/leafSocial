@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leaf/helper/demo_values.dart';
 import 'package:leaf/view/widgets/post_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,10 +12,13 @@ class HomePage extends StatelessWidget {
         title: Text("Leaf"),
       ),
       body: ListView.builder(
-          itemCount: 10, //# of widges to built
+          itemCount: DemoValues.posts.length, //# of widges to built
           itemBuilder: (BuildContext context, int index) {
             //function to build that type of widget
-            return PostCard();
+            return Container(
+              child: PostCard(postData: DemoValues.posts[index]),
+              height: MediaQuery.of(context).size.height,
+            );
           }),
     );
   }
