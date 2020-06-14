@@ -9,6 +9,7 @@ class PostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      //on tap of the whole card.
       onTap: () {
         Navigator.push(context,
             MaterialPageRoute(builder: (BuildContext context) {
